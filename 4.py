@@ -1,8 +1,9 @@
 def find_last_not_of(a, b):
-    for i in b:
-        if i in b and i in a:
-            index = a.index(i)
-        return a[index-1]
-    print(find_last_not_of("hithere", "i"))
-
-
+    list_a = list(a)
+    list_a.reverse()
+    for i in list_a:
+        if i in list_a and i not in b:
+            return i
+        else:
+            return None
+print(find_last_not_of("hip", ["h", "i"]))
